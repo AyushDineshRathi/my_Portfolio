@@ -16,7 +16,7 @@ export const profileData = {
     availability: "Open to internships and collaborations",
     profileImage: ayushImage,
     resumeLink:
-      "https://drive.google.com/file/d/1PcRtuvR7EAULdaNvCOptviXd2M47pO4n/view?usp=sharing",
+      "https://drive.google.com/file/d/16RSmOnkKoU7nlGlG_HpNKJjC6n9vDGUb/view?usp=sharing",
   },
 
   socialLinks: [
