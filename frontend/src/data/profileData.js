@@ -1,3 +1,5 @@
+import ayushImage from "../assets/Ayush.jpg";
+
 export const profileData = {
   basicInfo: {
     name: "Ayush Dinesh Rathi",
@@ -12,7 +14,7 @@ export const profileData = {
     location: "Jabalpur, Madhya Pradesh, India",
     email: "ayushrathi955@gmail.com",
     availability: "Open to internships and collaborations",
-    profileImage: "/src/assets/Ayush.jpg",
+    profileImage: ayushImage,
     resumeLink:
       "https://drive.google.com/file/d/1PcRtuvR7EAULdaNvCOptviXd2M47pO4n/view?usp=sharing",
   },
