@@ -3,7 +3,7 @@
 
 This is my personal portfolio website — a place where you can explore my work, skills, achievements, experience, and the projects I am most proud of.I built this portfolio to represent myself professionally and create a clean, interactive way for people to know me better.
 
-🚀 **About This Website**
+**About This Website**
 -------------------------
 
 This portfolio includes:
@@ -21,7 +21,7 @@ This portfolio includes:
 
 The goal was to create something that represents me well, feels personal, and showcases both my **tech skills** and **design sense**.
 
-👨‍💻 **About Me**
+**About Me**
 ------------------
 
 Hi! I’m **Ayush Dinesh Rathi**, a passionate learner and developer currently exploring:
@@ -39,7 +39,7 @@ Hi! I’m **Ayush Dinesh Rathi**, a passionate learner and developer currently e
 I love building solutions that make communication easier — especially my recent work on **Sign Language Recognition** and **Audio-to-Sign Language translation**.
     
 
-📌 **What You Can Explore Here**
+**What You Can Explore Here**
 --------------------------------
 
 *   My projects
@@ -56,14 +56,14 @@ I love building solutions that make communication easier — especially my recen
     
 *   A built-in assistant that can answer questions about me
 
-🌐 **Live Portfolio**
+**Live Portfolio**
 ---------------------
 
 Here is the live version of my website:
 
 👉 **[PortFolio](https://my-portfolio-one-gamma-14.vercel.app/)**
 
-⭐ **Thank You for Visiting!**
+**Thank You for Visiting!**
 -----------------------------
 
 Thank you for taking the time to explore my work.If you'd like to suggest improvements, collaborate, or talk about projects — I’m always open!
