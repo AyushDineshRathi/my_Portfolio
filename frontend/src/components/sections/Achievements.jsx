@@ -8,25 +8,25 @@ function Achievements() {
   }
 
   return (
-    <div className="section">
+    <section className="section container">
       <h2 className="section-title">Achievements & Certifications</h2>
-      <div className="achievements-grid">
+      <div className="projects-grid">
         {achievements.map((item, idx) => (
-          <div key={idx} className="achievement-card">
-            <h3>{item.title}</h3>
-            <p>
+          <div key={idx} className="project-card">
+            <h3 className="project-title" style={{ fontSize: '1.1rem' }}>{item.title}</h3>
+            <p style={{ fontSize: '0.9rem', color: 'var(--text-soft)', marginBottom: '0.5rem' }}>
               <strong>{item.issuer}</strong> · {item.year}
             </p>
-            <p>{item.description}</p>
+            <p className="project-desc">{item.description}</p>
             {item.link && (
-              <a href={item.link} target="_blank" rel="noreferrer">
-                View
+              <a href={item.link} target="_blank" rel="noreferrer" style={{ fontSize: '0.9rem', color: 'var(--accent)', textDecoration: 'none' }}>
+                View Certificate &rarr;
               </a>
             )}
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

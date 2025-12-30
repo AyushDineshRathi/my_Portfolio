@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { offlineAnswer } from "../../services/offlineChat.js";
 import { profileData } from "../../data/profileData.js";
 
 function ChatWidget() {
@@ -16,22 +15,38 @@ function ChatWidget() {
     setMessages((prev) => [...prev, msg]);
   };
 
-  const handleSend = () => {
+  const handleSend = async () => {
     const text = input.trim();
     if (!text) return;
 
     const userMessage = { sender: "user", text };
     appendMessage(userMessage);
     setInput("");
-
     setLoading(true);
 
-    // Simulate a short “thinking” delay (optional, just for feel)
-    setTimeout(() => {
-      const replyText = offlineAnswer(text);
-      appendMessage({ sender: "bot", text: replyText });
+    try {
+      const response = await fetch("http://localhost:5000/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: text }),
+      });
+
+      const data = await response.json();
+
+      if (data.reply) {
+        appendMessage({ sender: "bot", text: data.reply });
+      } else {
+        appendMessage({ sender: "bot", text: "Something went wrong. Please try again." });
+      }
+    } catch (error) {
+      console.error("Chat Error:", error);
+      appendMessage({
+        sender: "bot",
+        text: "I'm having trouble connecting to the server. Please try again later."
+      });
+    } finally {
       setLoading(false);
-    }, 200);
+    }
   };
 
   const handleKeyDown = (e) => {
@@ -60,9 +75,9 @@ function ChatWidget() {
                 Ask about Ayush, his projects, and this site
               </div>
               <div className="chat-status-row">
-                <span className="chat-status-dot chat-status-offline"></span>
+                <span className="chat-status-dot chat-status-online"></span>
                 <span className="chat-status-text">
-                  Offline assistant · no API or internet required
+                  AI Assistant · Hybrid Intelligence
                 </span>
               </div>
             </div>

@@ -27,11 +27,11 @@ function Footer() {
   };
 
   return (
-    <footer className="footer">
-      <div className="footer-top">
-        <div>&copy; {new Date().getFullYear()} {profileData.basicInfo.name}</div>
+    <footer className="footer container" style={{ marginTop: 'auto' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
+        <div style={{ fontWeight: 500 }}>&copy; {new Date().getFullYear()} {profileData.basicInfo.name}</div>
 
-        <div className="footer-social">
+        <div style={{ display: 'flex', gap: '1rem' }}>
           {social.map((s, idx) => {
             const key = s.platform.toLowerCase();
             const Icon = iconMap[key];
@@ -42,7 +42,9 @@ function Footer() {
                 href={s.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="footer-icon"
+                style={{ color: 'var(--text-muted)', transition: 'color 0.2s', fontSize: '1.2rem' }}
+                onMouseEnter={(e) => e.currentTarget.style.color = 'var(--accent)'}
+                onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-muted)'}
               >
                 {Icon ? <Icon size={20} /> : s.platform}
               </a>
@@ -51,8 +53,8 @@ function Footer() {
         </div>
       </div>
 
-      <div className="footer-bottom">
-        Built with ❤️ using React + Vite
+      <div style={{ marginTop: '1rem', fontSize: '0.85rem', color: 'var(--text-soft)' }}>
+        Built with React + Vite
       </div>
     </footer>
   );

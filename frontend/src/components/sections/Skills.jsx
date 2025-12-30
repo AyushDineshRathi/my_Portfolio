@@ -4,18 +4,20 @@ function Skills() {
   const { skills } = profileData;
 
   return (
-    <div className="section">
+    <section className="section container">
       <h2 className="section-title">Skills & Tech Stack</h2>
-      <div className="skills-grid">
+      <div className="skills-wrapper">
         {skills.map((category) => (
-          <div key={category.category} className="skills-card">
-            <h3 className="skills-category">{category.category}</h3>
-            <ul>
+          <div key={category.category} className="project-card" style={{ padding: '1.25rem' }}>
+            <div className="skill-category">
+              <h3>{category.category}</h3>
+            </div>
+            <ul className="skill-list">
               {category.items.map((skill) => (
-                <li key={skill.name}>
-                  {skill.name}
+                <li key={skill.name} className="skill-item">
+                  <span>{skill.name}</span>
                   {skill.level && (
-                    <span className="skills-level">({skill.level})</span>
+                    <span>{skill.level}</span>
                   )}
                 </li>
               ))}
@@ -23,7 +25,7 @@ function Skills() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 
