@@ -1,4 +1,5 @@
 import ayushImage from "../assets/Ayush.jpg";
+import { EMAIL, BASE_URLS } from "./constants.js";
 
 export const profileData = {
   basicInfo: {
@@ -12,7 +13,7 @@ export const profileData = {
       "Passionate about building inclusive, scalable, and high-impact AI solutions that solve real-world communication challenges.",
     ],
     location: "Jabalpur, Madhya Pradesh, India",
-    email: "ayushrathi955@gmail.com",
+    email: EMAIL,
     availability: "Open to internships and collaborations",
     profileImage: ayushImage,
     resumeLink:
@@ -22,32 +23,32 @@ export const profileData = {
   socialLinks: [
     {
       platform: "GitHub",
-      url: "https://github.com/AyushDineshRathi",
+      url: BASE_URLS.github,
       label: "Code",
     },
     {
       platform: "LinkedIn",
-      url: "https://www.linkedin.com/in/ayush-rathi-280295289/",
+      url: BASE_URLS.linkedin,
       label: "Professional",
     },
     {
       platform: "LeetCode",
-      url: "https://leetcode.com/u/adam955/",
+      url: BASE_URLS.leetcode,
       label: "Coding Practice",
     },
     {
       platform: "instagram",
-      url: "https://www.instagram.com/ayush_rathi95/",
+      url: BASE_URLS.instagram,
       label: "Social",
     },
     {
       platform: "CodeChef",
-      url: "https://www.codechef.com/users/ayush_rathi955/",
+      url: BASE_URLS.codechef,
       label: "Competitive Programming",
     },
     {
       platform: "Medium",
-      url: "https://medium.com/@aimlwork27/",
+      url: BASE_URLS.medium,
       label: "Blogs",
     },
   ],
@@ -152,7 +153,7 @@ export const profileData = {
         "Implemented multi-depth ego-graph search to identify alternate routes."
       ],
       links: {
-        github: "https://github.com/AyushDineshRathi/EventFlowAI",
+        github: `${BASE_URLS.github}/EventFlowAI`,
         demo: "https://event-flow-ai-eta.vercel.app/",
         paper: ""
       },
@@ -181,7 +182,7 @@ export const profileData = {
         "Optimized real-time inference to ~1 second latency, tested with students."
       ],
       links: {
-        github: "https://github.com/AyushDineshRathi/Vyakt",
+        github: `${BASE_URLS.github}/Vyakt`,
         demo: "",
         paper: "",
       },
@@ -211,7 +212,7 @@ export const profileData = {
         "Automated data pipelines and dynamic PDF report generation."
       ],
       links: {
-        github: "https://github.com/AyushDineshRathi/Chemical_equipment",
+        github: `${BASE_URLS.github}/Chemical_equipment`,
         demo: "https://chemicalequipmentvisualizer-kappa.vercel.app/",
         paper: "",
       },
@@ -236,7 +237,7 @@ export const profileData = {
         "Responsive web deployment with 1000+ active users.",
       ],
       links: {
-        github: "https://github.com/AyushDineshRathi/Game-Recommendation",
+        github: `${BASE_URLS.github}/Game-Recommendation`,
         demo: "",
         paper: "",
       },
@@ -269,7 +270,7 @@ export const profileData = {
         "Developed 4+ interactive dashboards with FastAPI + Streamlit.",
       ],
       links: {
-        github: "https://github.com/AyushDineshRathi/AquaLogiX",
+        github: `${BASE_URLS.github}/AquaLogiX`,
         demo: "",
         paper: "",
       },
@@ -303,7 +304,7 @@ export const profileData = {
         "Chainlit UI for retrieval + reasoning traceability.",
       ],
       links: {
-        github: "https://github.com/AyushDineshRathi/customer-experience-bot",
+        github: `${BASE_URLS.github}/customer-experience-bot`,
         demo: "",
         paper: "",
       },
@@ -400,7 +401,7 @@ export const profileData = {
       type: "Competitive Programming",
       description:
         "Ranked within the top 250 globally in CodeChef's rated Starters 190 contest.",
-      link: "https://www.codechef.com/users/ayush_rathi955",
+      link: BASE_URLS.codechef,
     },
     {
       title: "700+ Problems Solved",
@@ -409,7 +410,7 @@ export const profileData = {
       type: "Competitive Programming",
       description:
         "Solved more than 700 algorithm and data-structure problems showcasing strong problem-solving ability.",
-      link: "https://leetcode.com/u/adam955/",
+      link: BASE_URLS.leetcode,
     },
     {
       title: "Generative AI Professional",
@@ -455,7 +456,7 @@ export const profileData = {
   // === RESUME-LIKE EXTRA CONTEXT ===
   resumeMeta: {
     currentRole: "B.Tech CSE student",
-    academicStatus: "3rd year (2023-2027)",
+    academicStatus: "4th year (2023-2027)",
     graduationYear: "2027",
     cgpa: "8.6/10",
     portfolioSummary:

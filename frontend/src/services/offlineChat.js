@@ -25,9 +25,15 @@ function includesAny(text, keywords) {
 function findProjectByText(text) {
   const lower = normalize(text);
   for (const project of profileData.projects || []) {
+    const idSpaced = (project.id || "").toLowerCase().replace(/-/g, " ");
+    // Split on dash, em-dash, or colon to get just the main title
+    const mainName = project.name.toLowerCase().split(/ [-—:] /)[0].trim();
+
     if (
-      lower.includes(project.name.toLowerCase()) ||
-      lower.includes((project.id || "").toLowerCase())
+      lower.includes(idSpaced) ||
+      lower.includes(mainName) ||
+      lower.includes((project.id || "").toLowerCase()) ||
+      lower.includes(project.name.toLowerCase())
     ) {
       return project;
     }
@@ -163,7 +169,7 @@ export function offlineAnswer(message) {
   ) {
     const bioText = basicInfo.bio.join(" ");
     const metaLine = resumeMeta?.academicStatus
-      ? `He is currently ${resumeMeta.academicStatus}. `
+      ? `He is currently in ${resumeMeta.academicStatus}. `
       : "";
     return `I'm ${basicInfo.name}, ${basicInfo.title} based in ${basicInfo.location}.\n\n${metaLine}${bioText}`;
   }
