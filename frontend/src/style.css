@@ -18,54 +18,53 @@
 /* Light Theme (Default) */
 [data-theme="light"] {
   --bg-page: #ffffff;
-  --bg-subtle: #f9fafb;
-  --bg-card: #ffffff;
-  --bg-card-hover: #f9fafb;
+  --bg-subtle: #f4f5f7;
+  --bg-card: rgba(255, 255, 255, 0.7);
+  --bg-card-hover: rgba(255, 255, 255, 0.9);
 
-  --border-subtle: #e5e7eb;
-  --border-strong: #d1d5db;
+  --border-subtle: rgba(0, 0, 0, 0.05);
+  --border-strong: rgba(0, 0, 0, 0.1);
 
   --text-main: #111827;
   --text-muted: #4b5563;
   --text-soft: #9ca3af;
 
-  --accent: #2563eb;
-  /* Royal Blue */
-  --accent-glow: rgba(37, 99, 235, 0.15);
+  --accent: #4f46e5;
+  --accent-glow: rgba(79, 70, 229, 0.25);
   --accent-contrast: #ffffff;
+  --gradient-text: linear-gradient(135deg, #4f46e5 0%, #ec4899 100%);
 
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 2px 8px -2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 24px -4px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 12px 32px -4px rgba(0, 0, 0, 0.12);
 
-  --overlay: rgba(255, 255, 255, 0.8);
+  --overlay: rgba(255, 255, 255, 0.6);
 }
 
 /* Dark Theme */
 [data-theme="dark"] {
-  --bg-page: #02040a;
-  /* Deepest black/blue */
-  --bg-subtle: #090e1a;
-  --bg-card: #0b1221;
-  --bg-card-hover: #131c31;
+  --bg-page: #030712;
+  --bg-subtle: #111827;
+  --bg-card: rgba(17, 24, 39, 0.6);
+  --bg-card-hover: rgba(31, 41, 55, 0.8);
 
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-strong: rgba(255, 255, 255, 0.15);
+  --border-subtle: rgba(255, 255, 255, 0.05);
+  --border-strong: rgba(255, 255, 255, 0.1);
 
   --text-main: #f9fafb;
   --text-muted: #9ca3af;
   --text-soft: #6b7280;
 
-  --accent: #38bdf8;
-  /* Sky Blue */
-  --accent-glow: rgba(56, 189, 248, 0.15);
+  --accent: #818cf8;
+  --accent-glow: rgba(129, 140, 248, 0.25);
   --accent-contrast: #000000;
+  --gradient-text: linear-gradient(135deg, #818cf8 0%, #f472b6 100%);
 
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.6);
-  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.7);
+  --shadow-sm: 0 2px 8px -2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px -4px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 12px 32px -4px rgba(0, 0, 0, 0.6);
 
-  --overlay: rgba(2, 4, 10, 0.8);
+  --overlay: rgba(3, 7, 18, 0.6);
 }
 
 /* Base Reset */
@@ -290,7 +289,7 @@ button {
   font-size: clamp(2.5rem, 5vw, 4rem);
   letter-spacing: -0.03em;
   margin-bottom: 1rem;
-  background: linear-gradient(to right, var(--text-main), var(--text-muted));
+  background: var(--gradient-text);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1.1;
@@ -360,9 +359,11 @@ button {
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
   padding: 1.5rem;
-  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease, border-color 0.3s ease;
   display: flex;
   flex-direction: column;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .project-card:hover {

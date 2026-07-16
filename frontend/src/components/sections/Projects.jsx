@@ -65,7 +65,7 @@ function Projects() {
                   rel="noreferrer"
                   className="link-icon"
                 >
-                  Live Demo
+                  Deployed Link
                 </a>
               )}
             </div>

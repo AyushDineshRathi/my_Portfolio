@@ -3,7 +3,7 @@ import ayushImage from "../assets/Ayush.jpg";
 export const profileData = {
   basicInfo: {
     name: "Ayush Dinesh Rathi",
-    title: "Machine Learning Enthusiat & Web Developer",
+    title: "Machine Learning Enthusiast & Web Developer",
     tagline:
       "Building intelligent, accessible experiences using machine learning, NLP, and web technologies.",
     bio: [
@@ -132,36 +132,90 @@ export const profileData = {
 
   projects: [
     {
-      id: "isl-translation-system",
-      name: "AI-Powered Indian Sign Language Translation System",
-      tagline:
-        "A real-time multimodal ISL translation system using transformers and computer vision.",
-      shortDescription:
-        "A real-time system capable of translating ISL gestures into text and generating sign animations from spoken or typed input.",
-      detailedDescription:
-        "Developed a full-scale ISL translation pipeline featuring a custom dataset of 17 gesture classes with ~1200 images each, captured and annotated using Mediapipe Holistic keypoint extraction. Trained a transformer-based vision model for Sign → Text translation. For Text → Sign, created a curated dataset of 500+ sign-language videos where sentences are broken into tokens, processed using NLP techniques, and mapped to corresponding ISL video units. The system achieves <200ms latency using a Flask backend and a React front-end interface.",
-      category: "Deep Learning · Computer Vision · Accessibility",
+      id: "eventflow-ai",
+      name: "EventFlow AI - Traffic Management",
+      tagline: "Real-time traffic management using machine learning and graph routing.",
+      shortDescription: "An AI system that reconstructs real-time traffic events and computes optimal alternate routes using dynamic edge weights.",
+      detailedDescription: "Engineered 140+ temporal, spatial, TF-IDF, and historical features and trained Random Forest models using strict time-based splits. Eliminated data leakage by redesigning historical aggregates. Built a real-time inference pipeline and developed an osmnx + networkx routing engine with multi-depth ego-graph search for dynamic live traffic rerouting.",
+      category: "Machine Learning · Real-time Systems",
       techStack: [
         "Python",
-        "Transformers",
-        "Computer Vision",
-        "Mediapipe",
-        "Flask",
+        "FastAPI",
         "React",
+        "scikit-learn",
+        "osmnx"
       ],
-      role: "Designed dataset, trained transformer model, built Text→Sign pipeline, and deployed with real-time UI.",
+      role: "Engineered ML features, built inference pipeline, and developed routing engine.",
       highlights: [
-        "Created custom dataset: 17 ISL gesture classes and ~1200 images for each class.",
-        "Trained transformer-based image model for gesture-to-text translation.",
-        "Generated Text→Sign output using a library of 500+ curated sign videos.",
-        "Achieved <200ms real-time inference latency via Flask + React.",
+        "Trained Random Forest models on 140+ features without data leakage.",
+        "Developed osmnx + networkx routing engine with dynamic edge weights.",
+        "Implemented multi-depth ego-graph search to identify alternate routes."
       ],
       links: {
-        github: "https://github.com/AyushDineshRathi/gestura",
+        github: "https://github.com/AyushDineshRathi/EventFlowAI",
+        demo: "https://event-flow-ai-eta.vercel.app/",
+        paper: ""
+      },
+      timeline: "2026",
+      featured: true,
+    },
+
+    {
+      id: "vyakt",
+      name: "Vyakt — AI Sign Language Translator",
+      tagline: "End-to-end AI system for real-time Sign-to-Text and Text-to-Sign translation.",
+      shortDescription: "A real-time translation system and a Duolingo-style platform for learning sign language.",
+      detailedDescription: "Built an end-to-end AI system for real-time Sign-to-Text and Text-to-Sign translation, along with a Duolingo-style platform for learning sign language. Designed a Transformer-based vision model trained on a custom dataset of 20,400 labeled ISL images. Achieved 94.8% training accuracy and 92.6% validation accuracy. Designed a Text → Sign pipeline using 500+ curated ISL videos. Optimized real-time inference to ~1 second latency.",
+      category: "Deep Learning · Computer Vision · Accessibility",
+      techStack: [
+        "Deep Learning",
+        "Computer Vision",
+        "Transformers",
+        "MediaPipe",
+        "Flask"
+      ],
+      role: "Developed vision model, dataset, Text→Sign pipeline, and real-time inference optimization.",
+      highlights: [
+        "Trained Transformer-based vision model on a custom dataset of 20,400 labeled ISL images.",
+        "Achieved 94.8% training and 92.6% validation accuracy on gesture classification.",
+        "Optimized real-time inference to ~1 second latency, tested with students."
+      ],
+      links: {
+        github: "https://github.com/AyushDineshRathi/Vyakt",
         demo: "",
         paper: "",
       },
-      timeline: "2024-2025",
+      timeline: "Jan 2026 - April 2026",
+      featured: true,
+    },
+
+    {
+      id: "chemical-equipment-visualizer",
+      name: "Chemical Equipment Visualizer",
+      tagline: "Full-stack system for generating visual insights and reports from equipment data.",
+      shortDescription: "A system to upload CSV data, view insights via React/PyQt5, and generate dynamic PDF reports.",
+      detailedDescription: "Engineered a full-stack system to upload CSV equipment data and generate visual insights, statistics, and PDF reports. Designed RESTful APIs using Django REST Framework. Implemented a React-based web interface and a PyQt5 desktop application for cross-platform access. Automated data pipelines using Pandas and ReportLab.",
+      category: "Full-Stack · Data Engineering",
+      techStack: [
+        "Django",
+        "DRF",
+        "React",
+        "PyQt5",
+        "Pandas",
+        "ReportLab"
+      ],
+      role: "Engineered full-stack system, APIs, desktop app, and automated PDF reporting.",
+      highlights: [
+        "Designed RESTful APIs using Django REST Framework for data processing.",
+        "Implemented cross-platform access via React web interface and PyQt5 desktop app.",
+        "Automated data pipelines and dynamic PDF report generation."
+      ],
+      links: {
+        github: "https://github.com/AyushDineshRathi/Chemical_equipment",
+        demo: "https://chemicalequipmentvisualizer-kappa.vercel.app/",
+        paper: "",
+      },
+      timeline: "2026",
       featured: true,
     },
 
@@ -260,19 +314,20 @@ export const profileData = {
 
   // === EXPERIENCE ===
   experience: [
-    // Example - fill with your actual entries
-    // {
-    //   role: "Machine Learning Intern",
-    //   organization: "Company Name",
-    //   location: "Remote",
-    //   start: "Jun 2024",
-    //   end: "Aug 2024",
-    //   type: "Internship",
-    //   details: [
-    //     "Worked on ...",
-    //     "Implemented ..."
-    //   ]
-    // }
+    {
+      role: "AI/ML Intern",
+      organization: "HeproAI",
+      location: "Remote",
+      start: "Jan 2026",
+      end: "March 2026",
+      type: "Internship",
+      details: [
+        "Built an AI-driven mentoring platform using K-Means clustering and cosine similarity-based matching for 500+ student profiles.",
+        "Developed a student readiness scoring pipeline to identify skill gaps and segment learners.",
+        "Designed a hybrid rule-based + ML recommendation system for mentor–student pairing.",
+        "Implemented end-to-end ML pipelines including data preprocessing, clustering, similarity matching, and evaluation."
+      ]
+    }
   ],
 
   // === EDUCATION ===
@@ -285,7 +340,7 @@ export const profileData = {
       startYear: "2023",
       endYear: "2027",
       details: [
-        "CGPA: 8.5/10.",
+        "CGPA: 8.6/10.",
         "Relevant coursework: Data Structures & Algorithms, Algorithms, Machine Learning, Artificial Intelligence, NLP, Operating Systems, DBMS, Computer Networks.",
         "Student Guide in the Counselling Committee and Dev Mentor in The Programming Club.",
         "Worked on major projects including AI-powered Indian Sign Language Translation System, Gamer Recommendation System, AquaLogix, and a privacy-first RAG Customer Experience Agent.",
@@ -348,12 +403,12 @@ export const profileData = {
       link: "https://www.codechef.com/users/ayush_rathi955",
     },
     {
-      title: "450+ Problems Solved",
+      title: "700+ Problems Solved",
       issuer: "LeetCode",
-      year: "2025",
+      year: "2026",
       type: "Competitive Programming",
       description:
-        "Solved more than 450 algorithm and data-structure problems showcasing strong problem-solving ability.",
+        "Solved more than 700 algorithm and data-structure problems showcasing strong problem-solving ability.",
       link: "https://leetcode.com/u/adam955/",
     },
     {
@@ -402,7 +457,7 @@ export const profileData = {
     currentRole: "B.Tech CSE student",
     academicStatus: "3rd year (2023-2027)",
     graduationYear: "2027",
-    cgpa: "8.5/10",
+    cgpa: "8.6/10",
     portfolioSummary:
       "Aspiring ML & web developer focusing on accessibility, NLP, and real-time systems like speech-to-sign and sign language translation.",
   },

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { profileData } from "../../data/profileData.js";
+import { offlineAnswer } from "../../services/offlineChat.js";
 
 function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,24 +26,21 @@ function ChatWidget() {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:5000/api/chat", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: text }),
-      });
+      // Simulate a realistic typing delay
+      await new Promise(resolve => setTimeout(resolve, 600));
 
-      const data = await response.json();
+      const reply = offlineAnswer(text);
 
-      if (data.reply) {
-        appendMessage({ sender: "bot", text: data.reply });
+      if (reply) {
+        appendMessage({ sender: "bot", text: reply });
       } else {
-        appendMessage({ sender: "bot", text: "Something went wrong. Please try again." });
+        appendMessage({ sender: "bot", text: "I'm not quite sure how to answer that." });
       }
     } catch (error) {
       console.error("Chat Error:", error);
       appendMessage({
         sender: "bot",
-        text: "I'm having trouble connecting to the server. Please try again later."
+        text: "I'm having trouble processing your request. Please try again later."
       });
     } finally {
       setLoading(false);
@@ -98,7 +96,7 @@ function ChatWidget() {
                     : "chat-message chat-message-bot"
                 }
               >
-                <div className="chat-bubble">{m.text}</div>
+                <div className="chat-bubble" style={{ whiteSpace: "pre-wrap", wordBreak: "break-word" }}>{m.text}</div>
               </div>
             ))}
 

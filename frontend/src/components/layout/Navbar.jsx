@@ -38,17 +38,6 @@ function Navbar({ theme, toggleTheme }) {
           </button>
         ))}
 
-        {profileData.basicInfo.resumeLink && (
-          <a
-            href={profileData.basicInfo.resumeLink}
-            target="_blank"
-            rel="noreferrer"
-            className="nav-item"
-            style={{ fontWeight: 600, color: "var(--accent)" }}
-          >
-            Resume
-          </a>
-        )}
 
         <button
           onClick={toggleTheme}

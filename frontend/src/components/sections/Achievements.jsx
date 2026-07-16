@@ -20,7 +20,7 @@ function Achievements() {
             <p className="project-desc">{item.description}</p>
             {item.link && (
               <a href={item.link} target="_blank" rel="noreferrer" style={{ fontSize: '0.9rem', color: 'var(--accent)', textDecoration: 'none' }}>
-                View Certificate &rarr;
+                View &rarr;
               </a>
             )}
           </div>

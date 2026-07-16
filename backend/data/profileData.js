@@ -3,7 +3,7 @@
 const profileData = {
   basicInfo: {
     name: "Ayush Dinesh Rathi",
-    title: "Machine Learning Enthusiat & Web Developer",
+    title: "Machine Learning Enthusiast & Web Developer",
     tagline:
       "Building intelligent, accessible experiences using machine learning, NLP, and web technologies.",
     bio: [
@@ -157,7 +157,7 @@ const profileData = {
         "Achieved <200ms real-time inference latency via Flask + React.",
       ],
       links: {
-        github: "https://github.com/AyushDineshRathi/gestura",
+        github: "https://github.com/AyushDineshRathi/Vyakt",
         demo: "",
         paper: "",
       },
@@ -269,7 +269,7 @@ const profileData = {
       startYear: "2023",
       endYear: "2027",
       details: [
-        "CGPA: 8.5/10.",
+        "CGPA: 8.6/10.",
         "Relevant coursework: Data Structures & Algorithms, Algorithms, Machine Learning, Artificial Intelligence, NLP, Operating Systems, DBMS, Computer Networks.",
         "Student Guide in the Counselling Committee and Dev Mentor in The Programming Club.",
         "Worked on major projects including AI-powered Indian Sign Language Translation System, Gamer Recommendation System, AquaLogix, and a privacy-first RAG Customer Experience Agent.",
@@ -383,7 +383,7 @@ const profileData = {
     currentRole: "B.Tech CSE student",
     academicStatus: "3rd year (2023-2027)",
     graduationYear: "2027",
-    cgpa: "8.5/10",
+    cgpa: "8.6/10",
     portfolioSummary:
       "Aspiring ML & web developer focusing on accessibility, NLP, and real-time systems like speech-to-sign and sign language translation.",
   },
